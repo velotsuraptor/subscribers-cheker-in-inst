@@ -14,12 +14,8 @@ def set_name():
 def define_subscriber(l1):
     new_list = []
     st1 = ''
-    # Replace the next line variable's value with your languages equivalent please so everything worked!
+    # Replace the next line variable's value with your webbrowser languages equivalent please so everything worked!
     edited_p = 'Основна світлина'
-    '''I'm sorry but I'm Ukrainian and ny Instagram is in Ukrainian and that's why this code won't work with 
-       your data. I highly recommend you replace the 'Основна світлина' in this code with your language's 
-       equivalent so your code could work. There no other things you will need to do manually except copying 
-       the subscribers. Would be thankful to anyone who will explain me the way me I can automate it!'''
     for item in l1:
         if len(item) > 17:
             new_list.append(item)
@@ -41,7 +37,7 @@ def rewrite_records():
                 f.write(str(file_data[:-1] + "'" + set_name() + "'"+ "]"))
                 return 0
             else:
-                f.write(file_data)
+                f.write(file_data[:-1])
             if file_data.strip() and file_data[-2] != '[':
                 f.write(',')
             f.write("'" + set_name() + "'")
